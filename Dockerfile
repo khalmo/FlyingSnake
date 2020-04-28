@@ -2,7 +2,7 @@ FROM python:3-alpine
 
 MAINTAINER Khalmo
 
-RUN apk add --no-cache mariadb-dev g++ && \
+RUN apk add --no-cache mariadb-dev g++ bash && \
     pip install --no-cache-dir discord.py aiohttp mysqlclient && \
     apk del g++ mariadb-dev && \
     apk add --no-cache mariadb-client && \
